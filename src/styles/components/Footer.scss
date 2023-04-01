@@ -1,0 +1,19 @@
+@import '../common';
+@import '../constants';
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  height: 15rem;
+  p {
+    margin-bottom: 1.5rem;
+    color: $white-color;
+  }
+  a {
+    text-decoration: none;
+    color: $gray-color;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}

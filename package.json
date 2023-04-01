@@ -1,13 +1,60 @@
 {
   "private": true,
+  "main": "pages/index.tsx",
+  "license": "MIT",
+  "author": {
+    "name": "Jose Ulloa"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "__tests__/unit/"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "next dev ./src -p 8080",
+    "test": "jest --config ./src/jest.config.js --watch",
+    "db:seed": "prisma db seed",
+    "build": "npm run prisma:generate && next build ./src",
+    "start": "next start",
+    "db:studio": "npx prisma studio",
+    "prisma:generate": "prisma generate --schema ./prisma/schema.prisma",
+    "ci:test": "jest --config ./src/jest.config.js --ci --coverage --reporters=default --reporters=jest-junit"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "@prisma/client": "^4.12.0",
+    "@testing-library/react": "^13.4.0",
+    "@types/node": "18.15.11",
+    "@types/react": "^18.0.29",
+    "@types/react-dom": "^18.0.11",
+    "next": "^13.2.4",
+    "jest-canvas-mock": "2.5.0",
+    "react": "^18.2.0",
+    "pg": "8.10.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.60.0",
+    "styled-components": "^5.3.9",
+    "typescript": "5.0.3"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/react": "14.0.0",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^18.15.11",
+    "@types/styled-components": "^5.1.26",
+    "eslint": "8.36.0",
+    "dotenv": "16.0.3",
+    "eslint-config-next": "13.1.6",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-jest-dom": "4.0.3",
+    "eslint-plugin-testing-library": "5.10.2",
+    "jest": "29.5.0",
+    "jest-environment-jsdom": "29.5.0",
+    "jest-junit": "15.0.0",
+    "prettier": "2.8.7",
+    "prisma": "^4.12.0",
+    "ts-node": "^10.9.1",
+    "typescript": "5.0.3"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} ./prisma/seed.ts"
   }
 }

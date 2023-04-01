@@ -1,0 +1,11 @@
+@import 'constants';
+
+:root {
+  max-width: $max-content-width;
+  margin: auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
