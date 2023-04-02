@@ -2,36 +2,35 @@ import React from 'react';
 import NavBar from '../components/shared/NavBar';
 import styled from 'styled-components';
 import Posts from '../components/shared/Posts';
+import { findPosts } from './api/posts/verbs';
 
 const Section = styled.section`
   margin: 1rem 0;
 `;
 
-export default function Home() {
-  const userPoster = {
-    firstName: 'Jose',
-    lastName: 'Ulloa',
-    profilePic: '/dog.svg',
+// TODO replace userId for real user id when auth is implemented
+const userId = 'clf7n24f50000g38ov6wmcwgw';
+
+export async function getServerSideProps() {
+  const posts = await findPosts(userId);
+  return {
+    props: {
+      posts: JSON.parse(JSON.stringify(posts.data)),
+    },
   };
-  const post = {
-    content:
-      'Hola este es mi primer post. Un gusto conocerlos a todos es toy en busca de amig hot.Hola este es mi primer post. Un gusto conocerlos a todos es toy en busca de amig hot.Hola este es mi primer post. Un gusto conocerlos a todos es toy en busca de amig hot.Hola este es mi primer post. Un gusto conocerlos a todos es toy en busca de amig hot.',
-    date: '26 de abril',
-    visibility: 'public',
-  };
-  const post2 = {
-    content:
-      'Hola este',
-    date: '26 de abril',
-    visibility: 'public',
-  };
+}
+
+export default function Home({ posts }: any) {
+  console.log(posts)
   return (
     <>
       <NavBar />
       <Section className="Home">
         <div className="main-content">
-          <Posts postType="text" author={userPoster} post={post} />
-          <Posts postType="text" author={userPoster} post={post2} />
+          {posts.length &&
+            posts.map((post: any) => {
+              return <Posts key={post.id} {...post} />;
+            })}
         </div>
       </Section>
     </>

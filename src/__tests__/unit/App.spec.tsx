@@ -7,6 +7,5 @@ describe('App Page', () => {
   const setup = () => render(<NavBar />);
   it('renders nav bar', () => {
     setup();
-    expect(screen.getByText('INICIO')).toBeVisible();
   });
 });

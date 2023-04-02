@@ -8,10 +8,22 @@ datasource db {
 }
 
 model user {
-  id        String   @id @default(cuid())
-  email     String   @unique @db.VarChar(100)
-  firstName String   @db.VarChar(100)
-  lastName  String   @db.VarChar(100)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id         String   @id @default(cuid())
+  email      String   @unique @db.VarChar(100)
+  firstName  String   @db.VarChar(100)
+  lastName   String   @db.VarChar(100)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  profilePic String @default("/default-profile-pic.svg")
+  post       post[]
+}
+
+model post {
+  id         String   @id @default(cuid())
+  visibility String   @default("public")
+  postType   String   @default("text")
+  createdAt  DateTime @default(now())
+  content    String
+  author     user     @relation(fields: [authorId], references: [id])
+  authorId   String
 }

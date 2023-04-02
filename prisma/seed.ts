@@ -3,7 +3,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 // Change const to true if you want to clear all data from DB before seeding
-const RESET_DATABASE = false;
+const RESET_DATABASE = true;
 
 const main = async () => {
   //Delete all data from DB
@@ -31,6 +31,22 @@ const main = async () => {
       email: 'jose@gmail.com',
       firstName: 'Jose',
       lastName: 'Ulloa',
+      profilePic: '/dog.svg'
+    },
+  });
+
+  await prisma.post.create({
+    data: {
+      authorId: 'clf7n24f50000g38ov6wmcwgw',
+      content:
+        'Hola este es mi primer post. 😗 😙 😚 😋 😛 😝 😜 🤪 🤨 🧐 🤓 😎 🥸 🤩 🥳 😏 😒 😞',
+    },
+  });
+
+  await prisma.post.create({
+    data: {
+      authorId: 'clf7n24f50000g38ov6wmcwgw',
+      content: 'Hola este es mi segundo post y este es mucho mas pichudo.  😞',
     },
   });
 };
