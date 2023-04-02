@@ -10,6 +10,9 @@
   height: 4.5rem;
   .search-bar {
     display: flex;
+    div {
+      width: 14rem;
+    }
     img {
       margin-right: 0.5rem;
     }

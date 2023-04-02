@@ -17,3 +17,12 @@
 .primary-full-bg {
   @include full-width-bg($primary-color);
 }
+
+.icon-circle-background {
+  background-color: $icon-circle-background-color;
+  border-radius: 5rem;
+  padding: 0.2rem;
+  &:hover {
+    background-color: $icon-circle-background-hover-color;
+  }
+}

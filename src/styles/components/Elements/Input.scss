@@ -9,11 +9,12 @@
   span {
     padding: 0.2rem 0 0 1rem;
   }
+
   .input-element {
     height: 2.5rem;
     border-top-right-radius: 5rem;
     border-bottom-right-radius: 5rem;
-    width: 11rem;
+    width: 100%;
     color: $secondary-font-color;
     background-color: $secondary-color;
     border: 0;

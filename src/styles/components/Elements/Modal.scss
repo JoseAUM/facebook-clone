@@ -1,0 +1,43 @@
+@import '../../common';
+@import '../../constants';
+
+.modal-element {
+  .modal-backdrop {
+    position: absolute;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .modal-container {
+    position: absolute;
+    top: 25%;
+    background-color: $primary-color;
+    border: 0.1rem solid $secondary-border-color;
+    margin: auto;
+    padding: 0.5rem;
+    width: 30%;
+    .modal-title {
+      border-bottom: 0.1rem solid $secondary-border-color;
+      padding-bottom: 0.7rem;
+      a {
+        border-radius: 5rem;
+        position: absolute;
+        top: 10%;
+        right: 3%;
+        img {
+          margin: 0;
+        }
+      }
+      h1 {
+        padding-top: .25rem;
+        text-align: center;
+        color: $primary-font-color;
+        font-weight: 400;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

@@ -30,7 +30,7 @@ export default function Posts({
     <Section className="posts-container">
       <div className="posts-header">
         <div className="author">
-          <Image src={author.profilePic} alt="Pic" width={40} height={40} />
+          <Image src={author.profilePic} alt="Profile Pic" width={40} height={40} />
           <div className="post-data">
             <h1>{author.firstName + ' ' + author.lastName}</h1>
             <span>

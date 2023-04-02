@@ -5,6 +5,7 @@ import '../styles/components/NavBar.scss';
 import '../styles/components/Posts.scss';
 import '../styles/pages/Home.scss';
 import '../styles/components/Elements/Input.scss';
+import '../styles/components/Elements/Modal.scss';
 import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
 import TopLayout from '../components/shared/TopLayout';
