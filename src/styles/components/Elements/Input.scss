@@ -1,0 +1,29 @@
+@import '../../common';
+@import '../../constants';
+
+.input-container {
+  background-color: $secondary-color;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  span {
+    padding: 0.2rem 0 0 1rem;
+  }
+  .input-element {
+    height: 2.5rem;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    width: 11rem;
+    color: $secondary-font-color;
+    background-color: $secondary-color;
+    border: 0;
+    font-size: 0.9rem;
+    padding-right: 1rem;
+    &::placeholder {
+      color: $input-placeholder-color;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

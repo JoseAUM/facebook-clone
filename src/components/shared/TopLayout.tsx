@@ -22,8 +22,8 @@ export default function TopLayout({ children }: Props) {
   return (
     <>
       <Head>
-        <title>Safehome</title>
-        <meta name="description" content="Safehome Web Application" />
+        <title>Facebook-Clone</title>
+        <meta name="description" content="Facebook clone Web Application" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

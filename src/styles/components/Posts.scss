@@ -1,0 +1,75 @@
+@import '../common';
+@import '../constants';
+
+.posts-container {
+  background-color: $primary-color;
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 0.3rem;
+
+  .posts-header {
+    display: flex;
+    justify-content: space-between;
+
+    .author {
+      display: flex;
+      align-items: center;
+      img {
+        border-radius: 5rem;
+      }
+      .post-data {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.5rem;
+        h1 {
+          font-size: 1rem;
+          font-weight: 400;
+        }
+        span {
+          display: flex;
+          align-items: center;
+          h5 {
+            font-size: 0.6rem;
+            font-weight: 200;
+          }
+        }
+      }
+    }
+    .utility-icons {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      img {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .posts-content {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    font-weight: 100;
+    line-height: 1.3rem;
+    word-wrap: break-word;
+  }
+
+  .posts-actions {
+    display: flex;
+    justify-content: space-around;
+    border-top: 0.1rem solid $secondary-border-color;
+    border-bottom: 0.1rem solid $secondary-border-color;
+    padding: 0.5rem 0;
+    align-items: center;
+    span {
+      display: flex;
+      align-items: center;
+      h3 {
+        margin-left: 0.75rem;
+        font-weight: 400;
+        font-size: 1rem;
+        color: $icon-font-color;
+      }
+    }
+  }
+}

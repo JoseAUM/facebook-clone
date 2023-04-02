@@ -1,0 +1,10 @@
+@import '../common';
+@import '../constants';
+
+.Home {
+  display: flex;
+  justify-content: center;
+  .main-content {
+    max-width: $max-main-content-width;
+  }
+}

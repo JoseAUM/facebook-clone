@@ -3,48 +3,17 @@
 @mixin full-width-bg($color) {
   position: absolute;
   top: 0;
-  left: calc((100vw - $max-content-width) / -2);
+  left: calc((100vw - $max-full-content-width) / -3);
   z-index: -100;
   width: 100vw;
   height: 100%;
   background-color: $color;
 
-  @media (max-width: $max-content-width) {
+  @media (max-width: $max-full-content-width) {
     left: 0;
   }
 }
 
 .primary-full-bg {
   @include full-width-bg($primary-color);
-}
-
-.secondary-full-bg {
-  @include full-width-bg($secondary-color);
-}
-
-.darker-primary-full-bg {
-  @include full-width-bg($darker-primary-color);
-}
-
-.semi-white-full-bg {
-  @include full-width-bg($semi-white-color);
-}
-
-.home-image-full-bg {
-  @include full-width-bg($white-color);
-  background-image: $home;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.primary-color {
-  color: $primary-color;
-}
-
-.secondary-color {
-  color: $secondary-color;
-}
-
-.gray-color {
-  color: $gray-color;
 }

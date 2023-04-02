@@ -1,14 +1,16 @@
 // colors
-$primary-color: #0c112a;
-$darker-primary-color: #090d20;
-$secondary-color: #29b2fe;
-$white-color: #ffffff;
-$semi-white-color: #f4f4f4;
-$gray-color: #738191;
-$secondary-gray-color: #738191;
+$primary-background-color: #18191a;
+$primary-color: #242526;
+$secondary-color: #393b3c;
+$secondary-border-color: #393a3b;
+$primary-font-color: #e4e6eb;
+$secondary-font-color: #e2e6ea;
+$icon-font-color: #a8abaf;
+$input-placeholder-color: #b1b2ba;
 
 // brackground images
 $home: url(/home-background.jpg);
 
 // spacing
-$max-content-width: 1140px;
+$max-full-content-width: 97%;
+$max-main-content-width: 50%;
